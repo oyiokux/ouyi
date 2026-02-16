@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import { MOCK_COINS } from '@/constants';
 import { AreaChart, Area, ResponsiveContainer, YAxis } from 'recharts';
 import { ArrowRight } from 'lucide-react';
@@ -52,12 +53,14 @@ export const MarketTicker: React.FC = () => {
                             <div key={coin.id} className="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-5 hover:bg-zinc-900/40 hover:border-zinc-700 transition-all cursor-pointer group">
                                 <div className="flex items-center justify-between mb-4">
                                     <div className="flex items-center gap-3">
-                                        <img
-                                            src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${coin.id === 'bitcoin' ? '1' : coin.id === 'ethereum' ? '1027' : coin.id === 'okb' ? '3897' : '5426'}.png`}
-                                            alt={coin.symbol}
-                                            className="w-8 h-8 rounded-full opacity-90 grayscale group-hover:grayscale-0 transition-all"
-                                        />
-                                        {/* Fallback Icon logic removed for simplicity in Next.js, or kept if needed. The original had onError logic suitable for React. */}
+                                        <div className="relative w-8 h-8 rounded-full overflow-hidden opacity-90 grayscale group-hover:grayscale-0 transition-all">
+                                            <Image
+                                                src={`/icons/${coin.id}.png`}
+                                                alt={coin.symbol}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
                                         <div>
                                             <h3 className="font-bold text-white leading-none text-base">{coin.symbol}</h3>
                                             <span className="text-xs text-zinc-500 font-medium mt-0.5 block">/ USDT</span>
