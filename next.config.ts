@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true,
   },
+  // GitHub Pages 部署在 /ouyi 子目录下，需要配置 basePath
+  basePath: process.env.NODE_ENV === "production" ? "/ouyi" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/ouyi/" : "",
 };
 
 export default nextConfig;
