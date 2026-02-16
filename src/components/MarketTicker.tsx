@@ -4,6 +4,29 @@ import { MOCK_COINS } from '@/constants';
 import { AreaChart, Area, ResponsiveContainer, YAxis } from 'recharts';
 import { ArrowRight } from 'lucide-react';
 
+// Client-side only chart wrapper
+const ClientChart = ({ data, color }: { data: any[], color: string }) => {
+    const [mounted, setMounted] = React.useState(false);
+    React.useEffect(() => setMounted(true), []);
+
+    if (!mounted) return null;
+
+    return (
+        <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={data}>
+                <YAxis domain={['dataMin', 'dataMax']} hide />
+                <Area
+                    type="monotone"
+                    dataKey="val"
+                    stroke={color}
+                    strokeWidth={2}
+                    fillOpacity={0.1}
+                />
+            </AreaChart>
+        </ResponsiveContainer>
+    );
+};
+
 export const MarketTicker: React.FC = () => {
     return (
         <div className="py-12 border-b border-zinc-900/50 bg-black/50 backdrop-blur-sm">
@@ -50,18 +73,8 @@ export const MarketTicker: React.FC = () => {
                                         ${coin.price.toLocaleString()}
                                     </div>
                                     <div className="h-10 w-24 opacity-60 group-hover:opacity-100 transition-opacity">
-                                        <ResponsiveContainer width="100%" height="100%">
-                                            <AreaChart data={chartData}>
-                                                <YAxis domain={['dataMin', 'dataMax']} hide />
-                                                <Area
-                                                    type="monotone"
-                                                    dataKey="val"
-                                                    stroke={color}
-                                                    strokeWidth={2}
-                                                    fillOpacity={0.1}
-                                                />
-                                            </AreaChart>
-                                        </ResponsiveContainer>
+                                        {/* Use client-side only rendering for Recharts to avoid SSR issues */}
+                                        <ClientChart data={chartData} color={color} />
                                     </div>
                                 </div>
                             </div>
