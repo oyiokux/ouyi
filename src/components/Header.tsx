@@ -21,10 +21,9 @@ export const Header: React.FC = () => {
                 <div className="max-w-[1440px] w-full mx-auto px-6 h-[72px] flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group">
-                        <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold text-lg rounded-sm">
-                            OK
+                        <div className="px-2 h-8 bg-white text-black flex items-center justify-center font-bold text-base rounded-sm tracking-tight hover:bg-zinc-200 transition-colors">
+                            OKX
                         </div>
-                        <span className="text-lg font-bold text-white tracking-tight hidden sm:block">OKX</span>
                     </Link>
 
                     {/* Desktop Nav */}
@@ -34,8 +33,8 @@ export const Header: React.FC = () => {
                                 key={item.label}
                                 href={item.href}
                                 className={`px-4 py-2 text-sm font-medium transition-colors rounded-md ${isActive(item.href)
-                                        ? 'text-white bg-zinc-900'
-                                        : 'text-zinc-500 hover:text-white hover:bg-zinc-900/50'
+                                    ? 'text-white bg-zinc-900'
+                                    : 'text-zinc-500 hover:text-white hover:bg-zinc-900/50'
                                     }`}
                             >
                                 {item.label}
@@ -65,8 +64,8 @@ export const Header: React.FC = () => {
                                 href={item.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className={`block px-4 py-4 rounded-lg text-lg font-medium border-b border-zinc-900 ${isActive(item.href)
-                                        ? 'text-white'
-                                        : 'text-zinc-500'
+                                    ? 'text-white'
+                                    : 'text-zinc-500'
                                     }`}
                             >
                                 {item.label}

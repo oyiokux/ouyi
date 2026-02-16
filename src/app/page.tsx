@@ -13,6 +13,23 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-black selection:bg-blue-500/30">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: '欧易 OKX | 全球领先的数字资产交易平台',
+            url: 'https://oyiokux.github.io/ouyi',
+            description: '欧易 OKX 为全球 5,000 万用户提供安全、极速的数字资产交易服务。支持比特币、以太坊及 Web3 生态。',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://oyiokux.github.io/ouyi/search?q={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
+          }),
+        }}
+      />
 
       {/* Hero Section */}
       <div className="relative pt-32 pb-24 border-b border-zinc-900/50 overflow-hidden">
@@ -61,8 +78,8 @@ export default function Home() {
                   <div className="h-2 w-16 bg-zinc-700/50 rounded-full"></div>
                   <div className="h-2 w-16 bg-zinc-700/50 rounded-full"></div>
                 </div>
-                <div className="h-8 w-8 bg-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-xs font-bold text-white">OK</span>
+                <div className="h-8 px-2 bg-blue-600 rounded-full flex items-center justify-center min-w-[32px]">
+                  <span className="text-[10px] font-bold text-white tracking-widest leading-none">OKX</span>
                 </div>
               </div>
               {/* Main Number */}
