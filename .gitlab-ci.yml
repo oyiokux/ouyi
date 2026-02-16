@@ -1,0 +1,14 @@
+image: node:20-alpine
+
+pages:
+  stage: deploy
+  script:
+    - npm ci                # 使用 package-lock.json 安装依赖
+    - npm run build         # 构建 Next.js 项目 (生成 out 目录)
+    - rm -rf public         # 删除默认的 public (资源文件已打包进 out)
+    - mv out public         # 将构建产物重命名为 GitLab Pages 需要的 public 文件夹
+  artifacts:
+    paths:
+      - public              # 指定要上传的目录
+  only:
+    - main                  # 只在 main 分支触发部署
