@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oyiokux.github.io/ouyi/sitemap.xml

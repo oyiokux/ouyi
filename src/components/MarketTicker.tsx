@@ -5,6 +5,8 @@ import { MOCK_COINS } from '@/constants';
 import { AreaChart, Area, ResponsiveContainer, YAxis } from 'recharts';
 import { ArrowRight } from 'lucide-react';
 
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/ouyi' : '';
+
 // Client-side only chart wrapper
 const ClientChart = ({ data, color }: { data: any[], color: string }) => {
     const [mounted, setMounted] = React.useState(false);
@@ -54,11 +56,10 @@ export const MarketTicker: React.FC = () => {
                                 <div className="flex items-center justify-between mb-4">
                                     <div className="flex items-center gap-3">
                                         <div className="relative w-8 h-8 rounded-full overflow-hidden opacity-90 grayscale group-hover:grayscale-0 transition-all">
-                                            <Image
-                                                src={`/icons/${coin.id}.png`}
+                                            <img
+                                                src={`${BASE_PATH}/icons/${coin.id}.png`}
                                                 alt={coin.symbol}
-                                                fill
-                                                className="object-cover"
+                                                className="w-full h-full object-cover"
                                             />
                                         </div>
                                         <div>
