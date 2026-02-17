@@ -1,24 +1,29 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+
+const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
-  output: "export",  // 启用静态导出
+  output: 'export',
+
+  // Deploy to GitHub Pages: /ouyi/
+  basePath: isProd ? '/ouyi' : '',
+  assetPrefix: isProd ? '/ouyi/' : '',
+
+  // CRITICAL FIX: Ensure trailing slash for directory-based routing on GitHub Pages
+  trailingSlash: true,
+
+  // Disable image optimization for static export (Use standard img tag or unoptimized Image)
   images: {
-    unoptimized: true, // 静态站点无法使用 Next.js 默认图片优化
+    unoptimized: true,
   },
+
+  // Ignore errors for guaranteed build
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
     ignoreBuildErrors: true,
   },
-  // GitHub Pages 部署在 /ouyi 子目录下，需要配置 basePath
-  basePath: process.env.NODE_ENV === "production" ? "/ouyi" : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? "/ouyi/" : "",
 };
 
 export default nextConfig;
