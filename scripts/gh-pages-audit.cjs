@@ -183,6 +183,67 @@ async function runLiveChecks() {
         }
     }
 
+    // ========== PART 3: Canonical URL Checks ==========
+    console.log('\n🔗 Part 3: Canonical URL Checks\n');
+
+    function httpGet(url) {
+        return new Promise((resolve) => {
+            const req = https.get(url, { timeout: 10000 }, (res) => {
+                let body = '';
+                res.on('data', chunk => body += chunk);
+                res.on('end', () => resolve({ url, status: res.statusCode, body }));
+            });
+            req.on('error', (err) => resolve({ url, status: 0, body: '', error: err.message }));
+            req.on('timeout', () => { req.destroy(); resolve({ url, status: 0, body: '', error: 'Timeout' }); });
+        });
+    }
+
+    if (sitemapUrls.length === 0) {
+        log('warn', 'No URLs to check canonical tags for');
+    } else {
+        for (const url of sitemapUrls) {
+            const result = await httpGet(url);
+
+            if (result.status !== 200) {
+                log('fail', `Cannot fetch page for canonical check`, `${url} → ${result.status || result.error}`);
+                continue;
+            }
+
+            // Extract canonical
+            const canonicalMatch = result.body.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i)
+                || result.body.match(/<link[^>]+href=["']([^"']+)["'][^>]+rel=["']canonical["']/i);
+
+            if (!canonicalMatch) {
+                log('fail', `Missing <link rel="canonical">`, url);
+                continue;
+            }
+
+            const canonical = canonicalMatch[1];
+
+            // Check 1: Canonical exists
+            log('pass', `Canonical tag found`, `${url}`);
+
+            // Check 2: Canonical has trailing slash
+            const isRoot = url === `${SITE_BASE}/` || url === SITE_BASE;
+            if (canonical.endsWith('/')) {
+                log('pass', `Canonical uses trailing slash`, `canonical="${canonical}"`);
+            } else {
+                log('warn', `Canonical missing trailing slash`,
+                    `canonical="${canonical}" — Should end with / for consistency with sitemap`);
+            }
+
+            // Check 3: Canonical matches current page URL
+            const normalizedCanonical = canonical.replace(/\/$/, '');
+            const normalizedUrl = url.replace(/\/$/, '');
+            if (normalizedCanonical === normalizedUrl) {
+                log('pass', `Canonical matches page URL`, `${canonical} ≡ ${url}`);
+            } else {
+                log('fail', `Canonical mismatch!`,
+                    `Page: ${url}\n         Canonical: ${canonical}\n         These should point to the same page.`);
+            }
+        }
+    }
+
     // ========== SUMMARY ==========
     const total = pass + warn + fail;
     const score = total > 0 ? Math.round((pass / total) * 100) : 0;
