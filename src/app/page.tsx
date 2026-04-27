@@ -32,7 +32,7 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <div className="relative pt-8 md:pt-32 pb-8 md:pb-24 border-b border-zinc-900/50 overflow-hidden">
+      <div className="relative flex items-center min-h-[calc(100svh-72px)] md:min-h-0 md:pt-32 md:pb-24 border-b border-zinc-900/50 overflow-hidden">
         {/* Ambient Background Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
 
@@ -53,7 +53,7 @@ export default function Home() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">官网访问入口</span>
             </h1>
 
-            <p className="text-sm sm:text-lg text-zinc-400 mb-5 md:mb-10 max-w-lg leading-relaxed text-justify sm:text-center line-clamp-3 sm:line-clamp-none">
+            <p className="hidden sm:block text-sm sm:text-lg text-zinc-400 mb-5 md:mb-10 max-w-lg leading-relaxed text-justify sm:text-center">
               欧易 OKX 为全球 5,000 万用户提供安全、极速的数字资产交易服务。支持比特币、以太坊及 Web3 生态，助您轻松探索加密世界，畅享极致交易体验。
             </p>
 
