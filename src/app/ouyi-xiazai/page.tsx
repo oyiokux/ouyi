@@ -14,7 +14,7 @@ export default function DownloadTutorialPage() {
             <div className="max-w-4xl w-full">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                        下载安装问题指南
+                        欧易下载安装指南
                     </h1>
                     <p className="text-zinc-400 text-lg max-w-2xl mx-auto mb-10">
                         {'遇到“无法安装”、“风险提示”或“未受信任”？请查看下方的详细解决方案。'}
