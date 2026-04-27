@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function WebPage() {
     return (
-        <div className="min-h-screen pt-[72px] md:pt-32 pb-20 px-6 flex flex-col items-center bg-black">
+        <div className="min-h-screen pt-20 md:pt-32 pb-20 px-6 flex flex-col items-center bg-black">
             <div className="max-w-4xl w-full text-center">
 
-                <div className="mb-6 md:mb-20 animate-fade-in flex flex-col items-center justify-center min-h-[calc(100svh-72px)] md:min-h-0">
+                <div className="mb-8 md:mb-20 animate-fade-in">
                     <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-8">
                         <Globe className="w-8 h-8 text-blue-500" />
                     </div>

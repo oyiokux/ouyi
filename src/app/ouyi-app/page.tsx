@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 export default function AppPage() {
     return (
-        <div className="min-h-screen pt-[72px] md:pt-32 pb-20 px-6 flex flex-col items-center bg-black">
+        <div className="min-h-screen pt-20 md:pt-32 pb-20 px-6 flex flex-col items-center bg-black">
             <div className="max-w-5xl w-full">
-                <div className="text-center mb-6 md:mb-20 animate-fade-in flex flex-col items-center justify-center min-h-[calc(100svh-72px)] md:min-h-0">
+                <div className="text-center mb-8 md:mb-20 animate-fade-in">
                     <h1 className="text-3xl md:text-7xl font-bold text-white mb-4 md:mb-6 tracking-tight">
                         欧易APP下载
                     </h1>

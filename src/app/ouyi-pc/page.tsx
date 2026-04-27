@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function PCPage() {
     return (
-        <div className="min-h-screen pt-[72px] md:pt-32 pb-20 px-6 flex flex-col items-center bg-black">
+        <div className="min-h-screen pt-20 md:pt-32 pb-20 px-6 flex flex-col items-center bg-black">
             <div className="max-w-6xl w-full">
 
-                <div className="flex flex-col items-center text-center justify-center flex-1 min-h-[calc(100svh-72px)] md:min-h-0 md:mb-20 animate-fade-in">
+                <div className="flex flex-col items-center text-center mb-8 md:mb-20 animate-fade-in">
                     <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-medium text-purple-400 bg-purple-400/10 border border-purple-400/20 rounded-full">
                         <Cpu className="w-3 h-3" /> 专业版终端
                     </div>
