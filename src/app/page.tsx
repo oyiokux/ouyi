@@ -53,7 +53,7 @@ export default function Home() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">官网访问入口</span>
             </h1>
 
-            <p className="hidden sm:block text-sm sm:text-lg text-zinc-400 mb-5 md:mb-10 max-w-lg leading-relaxed text-justify sm:text-center">
+            <p className="text-sm sm:text-lg text-zinc-400 mb-5 md:mb-10 max-w-lg leading-relaxed text-center line-clamp-2 sm:line-clamp-none">
               欧易 OKX 为全球 5,000 万用户提供安全、极速的数字资产交易服务。支持比特币、以太坊及 Web3 生态，助您轻松探索加密世界，畅享极致交易体验。
             </p>
 
