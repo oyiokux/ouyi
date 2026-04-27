@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 
 export default function PCPage() {
     return (
-        <div className="min-h-screen pt-32 pb-20 px-6 flex flex-col items-center bg-black">
+        <div className="min-h-screen pt-[72px] md:pt-32 pb-20 px-6 flex flex-col items-center bg-black">
             <div className="max-w-6xl w-full">
 
-                <div className="flex flex-col items-center text-center mb-20 animate-fade-in">
+                <div className="flex flex-col items-center text-center justify-center flex-1 min-h-[calc(100svh-72px)] md:min-h-0 md:mb-20 animate-fade-in">
                     <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-medium text-purple-400 bg-purple-400/10 border border-purple-400/20 rounded-full">
                         <Cpu className="w-3 h-3" /> 专业版终端
                     </div>
-                    <h1 className="text-5xl md:text-8xl font-bold text-white mb-8 tracking-tighter">
+                    <h1 className="text-3xl md:text-8xl font-bold text-white mb-4 md:mb-8 tracking-tighter">
                         欧易桌面客户端
                     </h1>
-                    <p className="text-zinc-400 text-xl max-w-3xl leading-relaxed mb-10">
+                    <p className="hidden sm:block text-zinc-400 text-xl max-w-3xl leading-relaxed mb-10">
                         专为高频交易者与专业分析师打造的桌面端旗舰应用。欧易 PC 客户端集成了更强大的原生图表工具、更低的 API 延迟以及多屏显示支持。在瞬息万变的加密市场中，为您提供毫秒级的响应速度与沉浸式的交易环境，助您精准捕捉每一个市场机会。
                     </p>
                     <Button

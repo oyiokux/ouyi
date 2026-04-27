@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 
 export default function WebPage() {
     return (
-        <div className="min-h-screen pt-32 pb-20 px-6 flex flex-col items-center bg-black">
+        <div className="min-h-screen pt-[72px] md:pt-32 pb-20 px-6 flex flex-col items-center bg-black">
             <div className="max-w-4xl w-full text-center">
 
-                <div className="mb-20 animate-fade-in">
+                <div className="mb-6 md:mb-20 animate-fade-in flex flex-col items-center justify-center min-h-[calc(100svh-72px)] md:min-h-0">
                     <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-8">
                         <Globe className="w-8 h-8 text-blue-500" />
                     </div>
-                    <h1 className="text-6xl font-bold text-white mb-6 tracking-tight">
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 md:mb-6 tracking-tight">
                         欧易网页版
                     </h1>
-                    <p className="text-zinc-400 text-xl max-w-2xl mx-auto leading-relaxed">
+                    <p className="hidden sm:block text-zinc-400 text-xl max-w-2xl mx-auto leading-relaxed">
                         打破设备限制，无需安装任何软件。欧易网页版通过浏览器即可直接访问，为您提供与客户端一致的完整交易功能。无论是在 Windows、macOS 还是 Linux 系统上，您都能享受到安全、便捷的数字资产管理服务，即刻开启您的 Web3 之旅。
                     </p>
                 </div>

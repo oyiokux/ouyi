@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 
 export default function AppPage() {
     return (
-        <div className="min-h-screen pt-32 pb-20 px-6 flex flex-col items-center bg-black">
+        <div className="min-h-screen pt-[72px] md:pt-32 pb-20 px-6 flex flex-col items-center bg-black">
             <div className="max-w-5xl w-full">
-                <div className="text-center mb-20 animate-fade-in">
-                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                <div className="text-center mb-6 md:mb-20 animate-fade-in flex flex-col items-center justify-center min-h-[calc(100svh-72px)] md:min-h-0">
+                    <h1 className="text-3xl md:text-7xl font-bold text-white mb-4 md:mb-6 tracking-tight">
                         欧易APP下载
                     </h1>
-                    <p className="text-zinc-400 text-xl max-w-3xl mx-auto">
+                    <p className="hidden sm:block text-zinc-400 text-xl max-w-3xl mx-auto">
                         随时随地，掌控全球加密市场。欧易 App 完美适配 iOS 与 Android 双系统，融合了币币交易、合约交易、Web3 钱包及理财功能。全新升级的 UI 设计与底层架构，为您提供丝般顺滑的操作体验与银行级的安全防护，让您不错过任何一次行情波动。
                     </p>
                 </div>
