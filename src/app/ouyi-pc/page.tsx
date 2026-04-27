@@ -25,7 +25,7 @@ export default function PCPage() {
                     </p>
                     <Button
                         size="lg"
-                        href="https://okxcexcn.com"
+                        href="https://ouxcex.com"
                         target="_blank"
                         className="bg-white text-black hover:bg-zinc-200 px-10 py-4 rounded-full font-bold text-lg shadow-[0_0_20px_rgba(255,255,255,0.15)]"
                     >

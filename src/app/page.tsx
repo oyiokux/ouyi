@@ -60,7 +60,7 @@ export default function Home() {
             <div className="flex justify-center w-full">
               <Button
                 size="lg"
-                href="https://okxcexcn.com"
+                href="https://ouxcex.com"
                 target="_blank"
                 className="min-w-[180px] h-14 text-lg bg-white text-black hover:bg-zinc-200 border-none shadow-[0_0_20px_rgba(255,255,255,0.15)] rounded-full font-bold tracking-wide"
               >

@@ -33,7 +33,7 @@ export default function WebPage() {
                         进入网页版交易
                     </div>
 
-                    <Button size="lg" href="https://okxcexcn.com" target="_blank" className="bg-white text-black hover:bg-zinc-200 rounded-full px-10 font-bold shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                    <Button size="lg" href="https://ouxcex.com" target="_blank" className="bg-white text-black hover:bg-zinc-200 rounded-full px-10 font-bold shadow-[0_0_20px_rgba(255,255,255,0.15)]">
                         立即访问 <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                 </div>
