@@ -32,7 +32,7 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <div className="relative pt-32 pb-24 border-b border-zinc-900/50 overflow-hidden">
+      <div className="relative pt-16 md:pt-32 pb-24 border-b border-zinc-900/50 overflow-hidden">
         {/* Ambient Background Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
 
@@ -40,7 +40,7 @@ export default function Home() {
 
           {/* Left Column: Text */}
           <div className="animate-fade-in flex flex-col items-center text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 text-xs font-medium text-green-400 bg-green-400/10 border border-green-400/20 rounded-full">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 md:mb-8 text-xs font-medium text-green-400 bg-green-400/10 border border-green-400/20 rounded-full">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>

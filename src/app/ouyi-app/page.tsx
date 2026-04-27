@@ -62,7 +62,7 @@ export default function AppPage() {
                                 {/* Domain removed */}
                             </div>
 
-                            <Button href="https://okx26.app" target="_blank" variant="outline" className="w-full justify-center text-base py-4 rounded-xl border-zinc-600 hover:border-white hover:text-white">
+                            <Button href="https://yiouapp.com" target="_blank" variant="outline" className="w-full justify-center text-base py-4 rounded-xl border-zinc-600 hover:border-white hover:text-white">
                                 下载 iOS 版
                             </Button>
                         </div>
