@@ -33,7 +33,7 @@ export default function AppPage() {
                                 <Smartphone className="w-6 h-6 text-green-400" />
                             </div>
                             <h2 className="text-2xl font-bold text-white mb-2">Android 安装包</h2>
-                            <p className="text-zinc-500 text-sm mb-8">适用于所有安卓设备 (Samsung, Xiaomi, Huawei, etc.) • 官方正版</p>
+                            <p className="text-zinc-500 text-sm mb-8">适用于所有安卓设备 (Samsung, Xiaomi, Huawei, etc.) • 正版安装</p>
 
                             <div className="mb-8">
                                 {/* Domain removed */}

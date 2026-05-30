@@ -59,7 +59,7 @@ export default function PCPage() {
 
                             <div className="pt-4">
                                 <div className="mt-4 text-sm text-zinc-500 font-mono">
-                                    官方高速下载通道 • 安全无毒
+                                    高速下载通道 • 安全无毒
                                 </div>
                             </div>
                         </div>

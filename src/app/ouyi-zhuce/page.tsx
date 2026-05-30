@@ -36,9 +36,9 @@ export default function RegisterPage() {
                         <div className="absolute left-0 top-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center font-bold text-white z-10">1</div>
                         <div className="absolute left-4 top-8 w-0.5 h-full bg-zinc-800 -z-0"></div>
 
-                        <h3 className="text-2xl font-bold text-white mb-4">访问官方入口</h3>
+                        <h3 className="text-2xl font-bold text-white mb-4">访问注册入口</h3>
                         <p className="text-zinc-400 mb-6 leading-relaxed">
-                            为了保障您的资产安全，防止网络钓鱼与诈骗，请务必通过上方的官方验证按钮进入注册页面。欧易支持手机号码（全球）或电子邮箱进行注册。如果您使用微信/QQ邮箱，请留意邮件可能会被归入垃圾箱。
+                            为了保障您的资产安全，防止网络钓鱼与诈骗，请务必通过上方的验证按钮进入注册页面。欧易支持手机号码（全球）或电子邮箱进行注册。如果您使用微信/QQ邮箱，请留意邮件可能会被归入垃圾箱。
                         </p>
                     </div>
 

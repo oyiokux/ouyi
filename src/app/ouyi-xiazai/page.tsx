@@ -43,7 +43,7 @@ export default function DownloadTutorialPage() {
                             <div>
                                 <h4 className="text-white font-medium mb-2 text-sm">安装被系统拦截或提示有风险？</h4>
                                 <p className="text-zinc-400 text-sm leading-relaxed text-justify">
-                                    {'由于安卓系统的开放性及各手机厂商的安全策略不同，部分国产手机（如华为、小米、OPPO等）可能会将区块链类应用误报为“高风险”或“病毒”。这属于正常的行业现象，欧易官方 App 经过严格安全检测，请放心安装。'}
+                                    {'由于安卓系统的开放性及各手机厂商的安全策略不同，部分国产手机（如华为、小米、OPPO等）可能会将区块链类应用误报为“高风险”或“病毒”。这属于正常的行业现象，欧易 App 经过严格安全检测，请放心安装。'}
                                 </p>
                             </div>
                             <div className="bg-zinc-950 p-5 rounded-lg border border-zinc-900">

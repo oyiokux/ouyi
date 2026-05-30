@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/Button';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: '欧易网页版 | 欧易 OKX 官网 | 在线交易',
+    title: '欧易网页版 | 欧易 OKX 入口 | 在线交易',
     description: '打破设备限制，无需安装任何软件。欧易网页版通过浏览器即可直接访问，为您提供与客户端一致的完整交易功能。',
 };
 
@@ -28,7 +28,7 @@ export default function WebPage() {
                 <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-12 max-w-2xl mx-auto mb-20 relative overflow-hidden group hover:border-zinc-600 transition-colors">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
 
-                    <div className="text-sm font-medium text-zinc-500 mb-4 tracking-wider">官方推荐交易入口</div>
+                    <div className="text-sm font-medium text-zinc-500 mb-4 tracking-wider">推荐交易入口</div>
                     <div className="text-3xl sm:text-5xl font-bold text-white tracking-tight mb-8 group-hover:text-blue-200 transition-colors">
                         进入网页版交易
                     </div>

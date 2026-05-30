@@ -5,7 +5,7 @@ import { Globe, Zap, Shield, Layers, Lock, CheckCircle2, ExternalLink, Activity 
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '欧易 OKX | 全球领先的数字资产交易平台 | 官网入口',
+  title: '欧易 OKX | 全球领先的数字资产交易平台 | 访问入口',
   description: '欧易 OKX 为全球 5,000 万用户提供安全、极速的数字资产交易服务。支持比特币、以太坊及 Web3 生态，助您轻松探索加密世界，畅享极致交易体验。',
   keywords: '欧易, OKX, 比特币交易, 加密货币, 数字资产, 区块链',
 };
@@ -45,12 +45,12 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
-              官方通道 • 实时更新
+              下载通道 • 实时更新
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-3 md:mb-6">
               欧易交易所(OKX)<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">官网访问入口</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">下载访问入口</span>
             </h1>
 
             <p className="text-sm sm:text-lg text-zinc-400 mb-5 md:mb-10 max-w-lg leading-relaxed text-center line-clamp-2 sm:line-clamp-none">
@@ -64,7 +64,7 @@ export default function Home() {
                 target="_blank"
                 className="min-w-[180px] h-14 text-lg bg-white text-black hover:bg-zinc-200 border-none shadow-[0_0_20px_rgba(255,255,255,0.15)] rounded-full font-bold tracking-wide"
               >
-                欧易官方入口
+                欧易访问入口
               </Button>
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-zinc-500 hover:text-white transition-colors text-sm font-medium group"
             >
-              欧易国际官网
+              欧易国际入口
               <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
             </a>
             <span className="text-[10px] text-zinc-600 font-mono border border-zinc-800 rounded px-1.5 py-0.5 w-fit bg-zinc-900/50">
