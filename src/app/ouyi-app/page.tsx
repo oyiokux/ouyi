@@ -39,7 +39,7 @@ export default function AppPage() {
                                 {/* Domain removed */}
                             </div>
 
-                            <Button href="https://ouyi26.app" target="_blank" className="w-full justify-center text-base py-4 bg-white text-black hover:bg-zinc-200 font-bold rounded-xl shadow-lg shadow-green-900/20">
+                            <Button href="https://okooyi.com" target="_blank" className="w-full justify-center text-base py-4 bg-white text-black hover:bg-zinc-200 font-bold rounded-xl shadow-lg shadow-green-900/20">
                                 下载安卓版
                             </Button>
                         </div>
